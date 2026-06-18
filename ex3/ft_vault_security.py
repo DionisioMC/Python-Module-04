@@ -1,4 +1,5 @@
-def secure_archive(file_name: str, action: str = "r", to_write: str = "") -> tuple[bool, str]:
+def secure_archive(file_name: str, action: str = "r", to_write: str = ""
+                   ) -> tuple[bool, str]:
     if action in ["r", "w"]:
         try:
             content: str
@@ -12,7 +13,7 @@ def secure_archive(file_name: str, action: str = "r", to_write: str = "") -> tup
         except Exception as e:
             return (False, str(e))
     else:
-        print("The provided action isn't supported")
+        return (False, "The provided action isn't supported")
 
 
 if __name__ == "__main__":

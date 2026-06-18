@@ -1,5 +1,4 @@
 import sys
-import typing
 
 if __name__ == "__main__":
     args = sys.argv
@@ -35,8 +34,10 @@ if __name__ == "__main__":
                     print(f"Data saved in file '{new_file_name}'.\n")
                 except PermissionError as e:
                     print(
-                        f"[STDERR] Error opening/writing in file '{new_file_name}': {e}", file=sys.stderr)
+                        "[STDERR] Error opening/writing in file "
+                        f"'{new_file_name}': {e}", file=sys.stderr)
                     print("Data not saved.\n")
         except Exception as e:
             print(
-                f"[STDERR] Error opening file '{args[1]}': {e}\n", file=sys.stderr)
+                f"[STDERR] Error opening file '{args[1]}': {e}\n",
+                file=sys.stderr)
